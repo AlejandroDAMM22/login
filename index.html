@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+	<!-- Bootstrap 5 CDN Link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+  <link rel="icon" type="image/jpg" href="favicon_uaeh.png"/>
+
+
+	<!-- Custom CSS Link -->
+	<link rel="stylesheet" href="estilosLogin.css">
+
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-md ">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center">
+        <img src="favicon_uaeh.png" alt="" width="45" height="45" class="d-inline-block align-top">
+        <span class="fs-5 fw-bold">Gestor de proyectos terminales</span>
+      </a>
+    </div>
+  </nav>
+</header>
+<br>
+    <section class="wrapper">
+		<div class="container">
+			<div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
+				<div class="logo">
+					<img src="favicon_uaeh.png" class="img-fluid" alt="Logo">
+				</div>
+				<form class="rounded bg-white shadow py-5 px-4">
+					<h3 class="text-dark fw-bolder fs-4 mb-2">Iniciar Sesión</h3>
+					
+          <div class="form-floating mb-3">
+						<input type="text" class="form-control" id="usuario" placeholder="name@example">
+						<label for="floatingInput"><i class="fas fa-user"></i> Usuario</label>
+					</div>
+					<div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+           
+            <label for="floatingInput"> <i class="fas fa-lock"></i> Contraseña</label>
+            
+          </div>
+
+					<button type="submit" class="btn btn-primary submit_btn w-100 my-4">Iniciar sesión</button>
+			
+				</form>
+			</div>
+		</div>
+	</section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Escuela Superior de Tizayuca.&copy</p>
+        </div>
+    </footer>
+
+	<!-- Bootstrap 5 JS CDN Link -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const verContrasenaBtn = document.getElementById('ver-contrasena');
+const passwordInput = document.getElementById('password');
+
+verContrasenaBtn.addEventListener('click', () => {
+  const tipo = passwordInput.getAttribute('type');
+  if (tipo === 'password') {
+    passwordInput.setAttribute('type', 'text');
+    verContrasenaBtn.innerHTML = '<i class="fas fa-eye-slash"></i>';
+  } else {
+    passwordInput.setAttribute('type', 'password');
+    verContrasenaBtn.innerHTML = '<i class="fas fa-eye"></i>';
+  }
+});
+  </script>
+
+</body>
+</html>

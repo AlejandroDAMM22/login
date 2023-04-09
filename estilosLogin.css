@@ -1,0 +1,133 @@
+/* Google Poppins Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    --primary-font-family: 'Poppins', sans-serif;
+    --light-white:#f5f8fa;
+    --gray:#841816;
+    --gray-1:#e3e3e3;
+}
+body{
+    font-family:var(--primary-font-family);
+    font-size: 14px;
+} 
+	/* Estilos para el header y footer */
+	.navbar-brand {
+		color: white;
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-decoration: none;
+		pointer-events: none;
+		
+	}
+	.navbar{
+		background-color: #841816;
+	}
+	.footer {
+		background-color: #841816;
+		color: #fff;
+		padding: 1rem 0;
+	}
+	.footer p {
+		margin: 0;
+		text-align: center;
+	}
+
+/* Main CSS */ 
+.wrapper{
+    padding:0 0 100px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size:contain;
+    min-height: 100%;
+}
+.wrapper .logo img{
+    max-width:25%;
+}
+.wrapper input{
+    background-color: var(--light-white);
+    border-color: var(--light-white);
+    color: var(--gray); 
+}
+.wrapper input:focus{ 
+    box-shadow: none;
+}
+.wrapper .submit_btn{
+    padding:15px;
+    font-weight: 500;
+}
+.wrapper .login_with{
+    padding:15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition:0.3s ease-in-out;
+}
+.wrapper .submit_btn:focus,
+.wrapper .login_with:focus{
+    box-shadow: none;
+}
+.wrapper .login_with:hover{
+    background-color:#841816;
+    border-color:var(--gray-1);
+}
+.wrapper .login_with img{
+    max-width: 8%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #841816;
+    border-color: #ffffff;
+}
+.wrapper .submit_btn:hover,
+.wrapper .login_with:hover{
+background-color:#000;
+border-color:#000;
+}
+
+
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+.password-toggle-icon input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: all;
+}
+
+.password-toggle-icon label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.icon-icons.com/icons2/2597/PNG/512/eye_check_checkbox_icon_156710.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.password-toggle-icon input[type="checkbox"]:checked + label {
+    background-image: url('https://cdn.icon-icons.com/icons2/2597/PNG/512/eye_uncheck_checkbox_icon_156713.png');
+}
+
+.password-toggle-icon input[type="checkbox"]:checked ~ #floatingPassword {
+    -webkit-text-security: none;
+    text-security: none;
+}
